@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 public class Day16_DependsOnMethods {
         @Test
         public void homePage(){
+
             System.out.println("I am on the home page");
         }
-
         @Test(dependsOnMethods = "homePage")
         public void searchPage(){
             System.out.println("I am on the search page");
