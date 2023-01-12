@@ -12,5 +12,6 @@ public class Day17_FirstDriverTest {
 
 //        close the driver
         Driver.closeDriver();
+
     }
 }
