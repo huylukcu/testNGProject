@@ -7,18 +7,14 @@ import techproed.utilities.Driver;
 
 public class OpenSourcePage {
 
-
         public OpenSourcePage(){
             //instantiate page object
             PageFactory.initElements(Driver.getDriver(),this);
         }
-
-        @FindBy(name = "username")
+        @FindBy(name ="username")
         public WebElement userName;
-
         @FindBy(name = "password")
         public WebElement password;
-
         @FindBy(xpath = "//button[@type='submit']")
         public WebElement logInSubmit;
 

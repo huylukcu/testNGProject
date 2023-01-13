@@ -17,9 +17,10 @@ public class Day17_OpenSourceLogin {
 */
       @Test
       public void loginTest() throws InterruptedException {
-    OpenSourcePage openSourcePage = new OpenSourcePage();
+    OpenSourcePage openSourcePage = new OpenSourcePage();//create an object to reach webElement on page class
 
-    Driver.getDriver().get(ConfigReader.getProperty("open_source_URL"));Thread.sleep(1000);
+    Driver.getDriver().get(ConfigReader.getProperty("open_source_URL"));
+    Thread.sleep(1000);
     openSourcePage.userName.sendKeys(ConfigReader.getProperty("open_source_admin_username"));
 
     Thread.sleep(1000);
