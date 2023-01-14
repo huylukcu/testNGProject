@@ -13,7 +13,6 @@ public class Day17_OpenSourceLogin {
     -password input
     -login button
     Note: Use constructor to instantiate page object
-
 */
       @Test
       public void loginTest() throws InterruptedException {
@@ -30,6 +29,5 @@ public class Day17_OpenSourceLogin {
     openSourcePage.logInSubmit.click();
 
     Driver.closeDriver();
-
 }
 }
