@@ -18,7 +18,6 @@ public class Day16_SoftAssert {
         hard assertion to see the bug reason
         check requirements ==> verification
         check expected and actual match==>validation
-
          */
     }
 }

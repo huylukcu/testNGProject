@@ -29,6 +29,5 @@ public class Day17_OpenSourceLogin {
     openSourcePage.submitButton.click();
 
     Driver.closeDriver();
-
 }
 }
