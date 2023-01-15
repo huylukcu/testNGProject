@@ -9,18 +9,22 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
     @FindBy(id = "formBasicEmail")
-    public WebElement emailInput;
+    public WebElement userName;
 
     @FindBy(id = "formBasicPassword")
-    public WebElement passwordInput;
+    public WebElement password;
 
     @FindBy(xpath = "//button[@type='submit']")
-    public WebElement loginSubmitButton;
+    public WebElement loginButton;
 
     @FindBy(xpath = "(//*[@class='invalid-feedback'])[1]")
     public WebElement invalidEmail;
 
     @FindBy(xpath = "//*[text()='Bad credentials']")
     public WebElement badCredential;
+
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement errorMessage_incorrectEmailPass;
+
 }
 

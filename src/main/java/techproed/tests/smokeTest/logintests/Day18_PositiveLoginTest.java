@@ -1,4 +1,4 @@
-package techproed.tests;
+package techproed.tests.smokeTest.logintests;
 
 import org.testng.annotations.Test;
 import techproed.pages.HomePage;
@@ -38,22 +38,26 @@ Then
             Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
 //        Click on login button
             HomePage homePage = new HomePage();
-            homePage.HomePageLoginButton.click();
+            homePage.HomePageLoginLink.click();
 
 //        Type john@doe.com into email input
             LoginPage loginPage = new LoginPage();
-            loginPage.emailInput.sendKeys("john@doe.com");
+            loginPage.userName.sendKeys("john@doe.com");
 
 //        Type John.123 into password input
-            loginPage.passwordInput.sendKeys("John.123");
+            loginPage.password.sendKeys("John.123");
 
 //        Click on login submit button
-            loginPage.loginSubmitButton.click();
+            loginPage.loginButton.click();
 
-//        Verify user logged in
-//        assertTrue(homePage.usernameDropDown.isDisplayed());
-            ReusableMethods.verifyElementDisplayed(homePage.usernameDropDown);//Recommended
+        ReusableMethods.waitFor(3);
+//        Verify login is successful
+        ReusableMethods.verifyElementDisplayed(homePage.userID);
+//        ALTERNATIVELY WE CAN ASSERT IF HOME PAGE LOGIN LINK IS NOT DISPLAYED. NOT RECOMMENDED
+//        ReusableMethods.verifyElementNotDisplayed(homePage.homePageLoginLink);
 
-            //Driver.closeDriver();
-        }
+        Driver.closeDriver();
+
+
+    }
 }

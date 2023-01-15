@@ -1,4 +1,4 @@
-package techproed.testshomework;
+package techproed.tests.homework;
 
 import org.testng.annotations.Test;
 import techproed.pages.TestHomePage;
@@ -31,10 +31,10 @@ public class LoginHomework {
 
 //        Type "techproed" into "username" input
         TestLoginPage testLoginPage = new TestLoginPage();
-        testLoginPage.usernameInput.sendKeys("techproed");
+        testLoginPage.username.sendKeys("techproed");
 
 //        Type "SuperSecretPassword" into password input
-        testLoginPage.passwordInput.sendKeys("SuperSecretPassword");
+        testLoginPage.password.sendKeys("SuperSecretPassword");
 
 //        Click submit button
         testLoginPage.submitButton.click();
@@ -42,7 +42,7 @@ public class LoginHomework {
 //        Verify user singed in
         TestHomePage testHomePage = new TestHomePage();
         //assertTrue(testHomePage.loginSuccessMessage.isDisplayed());
-        ReusableMethods.verifyElementDisplayed(testHomePage.loginSuccessMessage);
+        ReusableMethods.verifyElementDisplayed(testHomePage.loginMessage);
 
     }
 }

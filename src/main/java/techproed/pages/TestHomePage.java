@@ -11,5 +11,5 @@ public class TestHomePage {   //homepage means after loginpage
     }
 
     @FindBy(xpath = "//*[contains(text(), 'You logged into a secure area!')]")
-    public WebElement loginSuccessMessage;
+    public WebElement loginMessage;
 }

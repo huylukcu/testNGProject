@@ -1,4 +1,4 @@
-package techproed.testshomework;
+package techproed.tests.homework;
 
 import org.testng.annotations.Test;
 import techproed.pages.HomePage;
@@ -24,22 +24,22 @@ public class loginWithInvalid {
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
         // Click on login
         HomePage homePage = new HomePage();
-        homePage.HomePageLoginButton.click();
+        homePage.HomePageLoginLink.click();
         // Type in valid email "john@doe.com"
         LoginPage loginPage = new LoginPage();
-        loginPage.emailInput.sendKeys("john");
+        loginPage.userName.sendKeys("john");
         // Type in invalid password
-        loginPage.passwordInput.sendKeys("John.12");
+        loginPage.password.sendKeys("John.12");
         // Click on login button
-        loginPage.loginSubmitButton.click();
+        loginPage.loginButton.click();
         ReusableMethods.waitFor(3);
         // verify invalid email text
         ReusableMethods.verifyElementDisplayed(loginPage.invalidEmail);
         //send the correct email
-        loginPage.emailInput.sendKeys("@doe.com");
+        loginPage.userName.sendKeys("@doe.com");
         //verify not seen invalid emailtext
         ReusableMethods.verifyElementNotDisplayed(loginPage.invalidEmail);
-        loginPage.loginSubmitButton.click();
+        loginPage.loginButton.click();
         ReusableMethods.waitFor(3);
         //verify bad credential
         ReusableMethods.verifyElementDisplayed(loginPage.badCredential);

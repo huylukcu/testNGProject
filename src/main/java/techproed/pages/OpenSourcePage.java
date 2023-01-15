@@ -16,7 +16,7 @@ public class OpenSourcePage {
         @FindBy(name = "password")
         public WebElement password;
         @FindBy(xpath = "//button[@type='submit']")
-        public WebElement logInSubmit;
+        public WebElement submitButton;
 
     }
 
