@@ -28,7 +28,7 @@ public class Day19_NegativeLoginTest {
     @Test
     public void US100208_Negative_Login() throws IOException {
 //        As customer, I should not be able to log in the application
-//          going blue rental car home page
+//        going blue rental car home page
 //        https://www.bluerentalcars.com/
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
 //        Click on login button
@@ -54,11 +54,9 @@ public class Day19_NegativeLoginTest {
 
 //        Error: User with email fake@bluerentalcars.com not found
         String errorMessage = loginPage.errorMessage_incorrectEmailPass.getText();
-        Assert.assertEquals(errorMessage, "User with fake@bluerentalcars.com not found");
+        Assert.assertEquals(errorMessage,"User with email fake@bluerentalcars.com not found");
         ReusableMethods.getScreenshot("NegativeLoginScreenshot");
-
     }
-
     @Test
     public void invalidCredsTest() throws IOException {
 //        As customer, I should not be able to log in the application
@@ -88,7 +86,6 @@ public class Day19_NegativeLoginTest {
         ReusableMethods.waitFor(3);
 
 //        Error: User with email fake@bluerentalcars.com not found
-
         String errorMessage = loginPage.errorMessage_incorrectEmailPass.getText();
         Assert.assertEquals(errorMessage,"User with email "+fakeEmail+" not found");
         ReusableMethods.getScreenshot("NegativeLoginScreenshot");

@@ -23,9 +23,9 @@ Given
 When
     Click on login button
 And
-    Type john@doe.com into email input
+    Type jack@gmail.com into email input
 And
-    Type John.123 into password input
+    Type 12345 into password input
 And
     Click on login submit button
 Then
@@ -42,10 +42,10 @@ Then
 
 //        Type john@doe.com into email input
             LoginPage loginPage = new LoginPage();
-            loginPage.userName.sendKeys("john@doe.com");
+            loginPage.userName.sendKeys("jack@gmail.com");
 
 //        Type John.123 into password input
-            loginPage.password.sendKeys("John.123");
+            loginPage.password.sendKeys("12345");
 
 //        Click on login submit button
             loginPage.loginButton.click();
@@ -57,7 +57,5 @@ Then
 //        ReusableMethods.verifyElementNotDisplayed(homePage.homePageLoginLink);
 
         Driver.closeDriver();
-
-
     }
 }
