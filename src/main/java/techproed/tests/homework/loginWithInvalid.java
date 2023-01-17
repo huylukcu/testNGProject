@@ -24,7 +24,7 @@ public class loginWithInvalid {
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
         // Click on login
         HomePage homePage = new HomePage();
-        homePage.HomePageLoginLink.click();
+        homePage.homePageLoginLink.click();
         // Type in valid email "john@doe.com"
         LoginPage loginPage = new LoginPage();
         loginPage.userName.sendKeys("john");

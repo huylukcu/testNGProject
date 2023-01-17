@@ -38,7 +38,7 @@ Then
             Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
 //        Click on login button
             HomePage homePage = new HomePage();
-            homePage.HomePageLoginLink.click();
+            homePage.homePageLoginLink.click();
 
 //        Type john@doe.com into email input
             LoginPage loginPage = new LoginPage();

@@ -37,7 +37,7 @@ public class Day19_NegativeLoginTest {
         ReusableMethods.waitFor(3);
 
 //        sending credentials and clicking on login button
-        homePage.HomePageLoginLink.click();
+        homePage.homePageLoginLink.click();
         ReusableMethods.waitFor(3);
 
 //        Customer email: fake@bluerentalcars.com
@@ -66,7 +66,7 @@ public class Day19_NegativeLoginTest {
         homePage = new HomePage();
         loginPage= new LoginPage();
         ReusableMethods.waitFor(3);
-        homePage.HomePageLoginLink.click();
+        homePage.homePageLoginLink.click();
 
 //        sending credentials and clicking on login button
         ReusableMethods.waitFor(3);

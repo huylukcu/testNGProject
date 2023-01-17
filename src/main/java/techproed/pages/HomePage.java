@@ -11,7 +11,7 @@ public class HomePage {
     }
 
     @FindBy(partialLinkText = "Login")
-    public WebElement HomePageLoginLink;
+    public WebElement homePageLoginLink;
 
     @FindBy(id = "dropdown-basic-button")
     public WebElement userID;

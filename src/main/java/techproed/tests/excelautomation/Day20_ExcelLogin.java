@@ -24,7 +24,7 @@ public class Day20_ExcelLogin {
         loginPage =new LoginPage();
         ReusableMethods.waitFor(3);
         try {
-            homePage.HomePageLoginLink.click();
+            homePage.homePageLoginLink.click();
         }catch (Exception e){
         }
         try{
@@ -35,7 +35,7 @@ public class Day20_ExcelLogin {
             ReusableMethods.waitFor(1);
             homePage.OK.click();
             ReusableMethods.waitFor(1);
-            homePage.HomePageLoginLink.click();
+            homePage.homePageLoginLink.click();
             ReusableMethods.waitFor(1);
         }catch (Exception e){
         }
