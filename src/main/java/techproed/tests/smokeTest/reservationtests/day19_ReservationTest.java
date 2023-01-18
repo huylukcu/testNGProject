@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import techproed.pages.HomePage;
 import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
