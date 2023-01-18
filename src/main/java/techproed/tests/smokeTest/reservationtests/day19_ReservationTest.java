@@ -8,7 +8,6 @@ import techproed.pages.LoginPage;
 import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
 import techproed.utilities.ReusableMethods;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
