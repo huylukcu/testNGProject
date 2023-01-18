@@ -24,7 +24,7 @@ public class Day19_NegativeLoginTest {
     */
     HomePage homePage;
     LoginPage loginPage;
-    Faker faker;
+    Faker faker;//declaire
     @Test
     public void US100208_Negative_Login() throws IOException {
 //        As customer, I should not be able to log in the application
@@ -73,7 +73,7 @@ public class Day19_NegativeLoginTest {
 
 //        Customer email: fake@bluerentalcars.com
 //        Customer password: fakepass
-        faker=new Faker();
+        faker=new Faker();//instation
         String fakeEmail = faker.internet().emailAddress();
         loginPage.userName.sendKeys(fakeEmail);
 
@@ -89,6 +89,6 @@ public class Day19_NegativeLoginTest {
         String errorMessage = loginPage.errorMessage_incorrectEmailPass.getText();
         Assert.assertEquals(errorMessage,"User with email "+fakeEmail+" not found");
         ReusableMethods.getScreenshot("NegativeLoginScreenshot");
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
 }

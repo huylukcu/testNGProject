@@ -7,8 +7,6 @@ import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
 import techproed.utilities.ReusableMethods;
 
-import static org.testng.AssertJUnit.assertTrue;
-
 public class LoginHomework {
     //    https://testcenter.techproeducation.com/index.php?page=form-authentication
 //    Login the application by using page object model
