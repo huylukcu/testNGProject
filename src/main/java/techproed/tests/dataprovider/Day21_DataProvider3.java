@@ -11,25 +11,26 @@ import techproed.utilities.ExcelUtils;
 import techproed.utilities.ReusableMethods;
 
 public class Day21_DataProvider3 {
-/*
-In this method, we will get the data from EXCEL using DATA PROVIDER
-The only difference between class 2 and class 3 is the place where we get teh data
-In class 2, we received the data from the class itself. In this class, we get the data from excel
- */
+    /*
+    In this method, we will get the data from EXCEL using DATA PROVIDER
+    The only difference between class 2 and class 3 is the place where we get teh data
+    In class 2, we received the data from the class itself. In this class, we get the data from excel
+     */
     HomePage homePage;
     LoginPage loginPage;
+
     @DataProvider
-    public Object[][] customerData(){
+    public Object[][] customerData() {
 //    TEST DATA. GET DATA FROM EXCEL
 //        PATH OF EXCEL SHEET
-        String path="./src/main/java/resources/mysmoketestdata.xlsx";
+        String path = "./src/main/java/resources/mysmoketestdata.xlsx";
 //        SHEET NAME
         String sheetName = "customer_info";
 //        CALL EXCEL UTIL CLASS
-        ExcelUtils excelUtils=new ExcelUtils(path,sheetName);
+        ExcelUtils excelUtils = new ExcelUtils(path, sheetName);
 //        USE ONE OF THE EXCEL UTIL METHOD TO RECEIVE THE DATA FROM THE EXCEL
 
-        Object [][] customerCredentials = excelUtils.getDataArrayWithoutFirstRow();
+        Object[][] customerCredentials = excelUtils.getDataArrayWithoutFirstRow();
 
 //        Object [][] customerCredentials = {
 //                {"sam.walker@bluerentalcars.com","c!fas_art"},
@@ -41,18 +42,18 @@ In class 2, we received the data from the class itself. In this class, we get th
     }
 
     //    1. Create a login method
-    public void login(){
+    public void login() {
 
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
         homePage = new HomePage();
-        loginPage =new LoginPage();
+        loginPage = new LoginPage();
         ReusableMethods.waitFor(1);
         try {
             homePage.homePageLoginLink.click();
             ReusableMethods.waitFor(1);
-        }catch (Exception e){
+        } catch ( Exception e ) {
         }
-        try{
+        try {
             ReusableMethods.waitFor(1);
             homePage.userID.click();
             ReusableMethods.waitFor(1);
@@ -62,13 +63,13 @@ In class 2, we received the data from the class itself. In this class, we get th
             ReusableMethods.waitFor(1);
             homePage.homePageLoginLink.click();
             ReusableMethods.waitFor(1);
-        }catch (Exception e){
+        } catch ( Exception e ) {
         }
         ReusableMethods.waitFor(1);
     }
 
     @Test(dataProvider = "customerData")
-    public void customerLoginTest(String username, String password){
+    public void customerLoginTest(String username, String password) {
 //            Takes us to the login page
         login();
         loginPage.userName.sendKeys(username);
@@ -83,12 +84,7 @@ In class 2, we received the data from the class itself. In this class, we get th
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         Driver.closeDriver();
     }
-
-
-
-
-
 }

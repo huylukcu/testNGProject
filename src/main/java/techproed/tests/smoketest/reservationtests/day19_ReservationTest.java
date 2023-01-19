@@ -1,4 +1,4 @@
-package techproed.tests.smokeTest.reservationtests;
+package techproed.tests.smoketest.reservationtests;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.support.ui.Select;
@@ -67,7 +67,11 @@ public class day19_ReservationTest {
 //        =====================================================
 //        And click continue reservation
         homePage.continueReservationButton.click();
+        Driver.closeDriver();
 //        And verify complete reservation screen pops up
+
+//        CAR IS NOT RESERVED There is a BLOCKER......
+
 //        And enter card number
 //        And enter name on the card
 //        And enter expire date and CVC

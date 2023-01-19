@@ -1,4 +1,4 @@
-package techproed.tests.smokeTest.logintests;
+package techproed.tests.smoketest.logintests;
 
 import com.github.javafaker.Faker;
 import org.testng.Assert;
@@ -25,7 +25,7 @@ public class Day19_NegativeLoginTest {
     HomePage homePage;
     LoginPage loginPage;
     Faker faker;//declaire
-    @Test
+    @Test(groups = "minor-regression-group")
     public void US100208_Negative_Login() throws IOException {
 //        As customer, I should not be able to log in the application
 //        going blue rental car home page
@@ -89,6 +89,6 @@ public class Day19_NegativeLoginTest {
         String errorMessage = loginPage.errorMessage_incorrectEmailPass.getText();
         Assert.assertEquals(errorMessage,"User with email "+fakeEmail+" not found");
         ReusableMethods.getScreenshot("NegativeLoginScreenshot");
-        //Driver.closeDriver();
+        Driver.closeDriver();
     }
 }
