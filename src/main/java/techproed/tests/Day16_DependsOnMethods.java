@@ -1,5 +1,4 @@
 package techproed.tests;
-
 import org.testng.annotations.Test;
 
 public class Day16_DependsOnMethods {
