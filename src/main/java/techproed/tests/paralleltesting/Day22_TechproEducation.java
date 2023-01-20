@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Day22_TechProEducation {
+public class Day22_TechproEducation {
     @Test
   public void lmsPageNavigation() throws InterruptedException {
     WebDriverManager.chromedriver().setup();
@@ -26,6 +26,3 @@ public class Day22_TechProEducation {
 }
 }
 
-
-
-}

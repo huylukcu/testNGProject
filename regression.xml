@@ -2,7 +2,7 @@
 <suite name="Blue Rental Car Project" verbose="1" >
     <test name="Regression Test">
         <packages>
-            <!--            run all packages that has @Test annotation-->
+            <!-- this is run all packages that has @Test annotation-->
             <package name="techproed.*"/>
         </packages>
     </test>
