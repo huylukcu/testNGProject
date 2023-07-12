@@ -10,15 +10,21 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.time.Duration;
 
 public class Driver {
+
+
     // Driver.getDriver(); --> driver
     private static WebDriver driver;
+
+
 
     public static WebDriver getDriver() {
         if (driver == null) {   //it is not be initilatize,I will create driver for data
             switch (ConfigReader.getProperty("browser")) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+                    driver = new ChromeDriver(options);
                     break;
 
                 case "firefox":
@@ -45,6 +51,7 @@ public class Driver {
         driver.manage().window().maximize();
         return driver;
     }
+
 
     //closeDriver() is used to close the driver
     public static void closeDriver() {
